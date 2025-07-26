@@ -173,11 +173,7 @@
                                 <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">{{ $service['title'] }}
                                 </h3>
                                 <p class="text-gray-600 dark:text-gray-400 mb-4 line-clamp-3">{{ $service['description'] }}
-                                </p>
-                                <button
-                                    class="text-rose-600 dark:text-rose-400 font-medium hover:text-rose-700 dark:hover:text-rose-300 transition-colors duration-200 group-hover:underline">
-                                    LEARN MORE
-                                </button>
+                                </p> 
                             </div>
                         </div>
                     </div>
