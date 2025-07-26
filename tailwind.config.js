@@ -8,10 +8,12 @@ export default {
         "./storage/framework/views/*.php",
         "./resources/views/**/*.blade.php",
     ],
-
+    darkMode: "class",
     theme: {
         extend: {
             colors: {
+                primary: "#eddbce",
+                secondary: "#be185d",
                 nail: {
                     charcoal: "#94959A",
                     "light-grey": "#D2D3D4",

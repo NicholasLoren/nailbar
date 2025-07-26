@@ -53,19 +53,9 @@
             <div class="relative">
                 <div
                     class="aspect-square bg-gradient-to-br from-rose-200 to-pink-300 dark:from-rose-800 dark:to-pink-900 rounded-3xl shadow-2xl overflow-hidden">
-                    <div class="w-full h-full flex items-center justify-center p-8">
+                    <div class="w-full h-full flex items-center justify-center p-8" style="background-image: url('{{asset('images/5.jpg')}}'); background-size: cover; background-position: center;">
                         <div class="text-center space-y-6">
-                            <div class="w-24 h-24 mx-auto bg-white/20 rounded-full flex items-center justify-center">
-                                <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="text-white font-bold text-xl mb-2">Luxury, Creativity,</h3>
-                                <h3 class="text-white font-bold text-xl mb-2">and Self-Care</h3>
-                                <h3 class="text-white font-bold text-xl">Combined</h3>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -197,131 +187,8 @@
             </div>
         </div>
     </div>
-</section> 
+</section>   
 
-{{-- About Us - Expert Team Section --}}
-<section class="py-16 lg:py-24 bg-white dark:bg-gray-900">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-                Our Expert Team
-            </h2>
-            <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-                Meet our skilled professionals who bring your beauty vision to life with expertise, creativity, and
-                passion.
-            </p>
-        </div>
-
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div class="text-center group">
-                <div class="relative mb-6">
-                    <div
-                        class="aspect-square bg-gradient-to-br from-pink-100 to-rose-200 dark:from-pink-900 dark:to-rose-800 rounded-2xl shadow-lg overflow-hidden group-hover:shadow-xl transition-all duration-300 transform group-hover:-translate-y-2">
-                        <div class="w-full h-full flex items-center justify-center p-6">
-                            <div class="text-center">
-                                <div
-                                    class="w-20 h-20 mx-auto bg-white/20 rounded-full flex items-center justify-center mb-4">
-                                    <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                                    </svg>
-                                </div>
-                                <p class="text-white font-medium">Professional</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Sarah Nakato</h3>
-                <p class="text-rose-600 dark:text-rose-400 font-medium mb-1">Lead Nail Technician</p>
-                <p class="text-sm text-gray-600 dark:text-gray-400">Acrylic & Gel Extensions</p>
-            </div>
-
-            <div class="text-center group">
-                <div class="relative mb-6">
-                    <div
-                        class="aspect-square bg-gradient-to-br from-purple-100 to-pink-200 dark:from-purple-900 dark:to-pink-800 rounded-2xl shadow-lg overflow-hidden group-hover:shadow-xl transition-all duration-300 transform group-hover:-translate-y-2">
-                        <div class="w-full h-full flex items-center justify-center p-6">
-                            <div class="text-center">
-                                <div
-                                    class="w-20 h-20 mx-auto bg-white/20 rounded-full flex items-center justify-center mb-4">
-                                    <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                                    </svg>
-                                </div>
-                                <p class="text-white font-medium">Professional</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Grace Mbabazi</h3>
-                <p class="text-rose-600 dark:text-rose-400 font-medium mb-1">Senior Nail Artist</p>
-                <p class="text-sm text-gray-600 dark:text-gray-400">Nail Art & Design</p>
-            </div>
-
-            <div class="text-center group">
-                <div class="relative mb-6">
-                    <div
-                        class="aspect-square bg-gradient-to-br from-indigo-100 to-purple-200 dark:from-indigo-900 dark:to-purple-800 rounded-2xl shadow-lg overflow-hidden group-hover:shadow-xl transition-all duration-300 transform group-hover:-translate-y-2">
-                        <div class="w-full h-full flex items-center justify-center p-6">
-                            <div class="text-center">
-                                <div
-                                    class="w-20 h-20 mx-auto bg-white/20 rounded-full flex items-center justify-center mb-4">
-                                    <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                                    </svg>
-                                </div>
-                                <p class="text-white font-medium">Professional</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Diana Kiconco</h3>
-                <p class="text-rose-600 dark:text-rose-400 font-medium mb-1">Beauty Specialist</p>
-                <p class="text-sm text-gray-600 dark:text-gray-400">Lashes & Brows</p>
-            </div>
-
-            <div class="text-center group">
-                <div class="relative mb-6">
-                    <div
-                        class="aspect-square bg-gradient-to-br from-teal-100 to-cyan-200 dark:from-teal-900 dark:to-cyan-800 rounded-2xl shadow-lg overflow-hidden group-hover:shadow-xl transition-all duration-300 transform group-hover:-translate-y-2">
-                        <div class="w-full h-full flex items-center justify-center p-6">
-                            <div class="text-center">
-                                <div
-                                    class="w-20 h-20 mx-auto bg-white/20 rounded-full flex items-center justify-center mb-4">
-                                    <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                                    </svg>
-                                </div>
-                                <p class="text-white font-medium">Professional</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Joy Namusoke</h3>
-                <p class="text-rose-600 dark:text-rose-400 font-medium mb-1">Nail Technician</p>
-                <p class="text-sm text-gray-600 dark:text-gray-400">Manicure & Pedicure</p>
-            </div>
-        </div>
-
-        <div class="mt-12 text-center">
-            <p class="text-lg text-gray-600 dark:text-gray-400 mb-6">
-                Our experienced team is here to provide you with exceptional service and create the perfect look for
-                you.
-            </p>
-            <a href="{{ route('contact') }}"
-                class="inline-flex items-center justify-center px-8 py-4 text-base font-medium text-white bg-rose-600 rounded-lg hover:bg-rose-700 transition-colors duration-200 shadow-lg">
-                Book with Our Team
-            </a>
-        </div>
-    </div>
-</section>
 
 {{-- About Us - Why Choose Us Section --}}
 <section class="py-16 lg:py-24 bg-gray-50 dark:bg-gray-800">
@@ -450,40 +317,40 @@
         </div>
 
         @php
-            $testimonials = [
-                [
-                    'name' => 'Anita Kusiima',
-                    'service' => 'Gel Extensions',
-                    'rating' => 5,
-                    'review' => 'Absolutely love coming here! The staff is so professional and the nail art is incredible. My gel extensions lasted over 3 weeks and still looked perfect. Best nail salon in Kampala!',
-                    'initial' => 'A',
-                    'gradient' => 'from-pink-400 to-rose-500'
-                ],
-                [
-                    'name' => 'Mary Akello',
-                    'service' => 'Nail Art Design',
-                    'rating' => 5,
-                    'review' => 'The ambiance is so relaxing and luxurious. Grace did an amazing job on my nail art - exactly what I envisioned! The attention to detail is unmatched. Highly recommend!',
-                    'initial' => 'M',
-                    'gradient' => 'from-purple-400 to-pink-500'
-                ],
-                [
-                    'name' => 'Rebecca Namatovu',
-                    'service' => 'Regular Pedicure',
-                    'rating' => 5,
-                    'review' => 'I\'ve been coming here for 6 months now and every visit exceeds my expectations. The hygiene standards are top-notch and Joy always gives the most relaxing pedicures!',
-                    'initial' => 'R',
-                    'gradient' => 'from-green-400 to-teal-500'
-                ],
-                [
-                    'name' => 'Stella Namugga',
-                    'service' => 'Lash Extensions',
-                    'rating' => 5,
-                    'review' => 'Diana is incredible with lash extensions! My lashes look so natural and full. The whole team is friendly and professional. Plus, the location at The Cube is so convenient!',
-                    'initial' => 'S',
-                    'gradient' => 'from-blue-400 to-indigo-500'
-                ]
-            ];
+$testimonials = [
+    [
+        'name' => 'Anita Kusiima',
+        'service' => 'Gel Extensions',
+        'rating' => 5,
+        'review' => 'Absolutely love coming here! The staff is so professional and the nail art is incredible. My gel extensions lasted over 3 weeks and still looked perfect. Best nail salon in Kampala!',
+        'initial' => 'A',
+        'gradient' => 'from-pink-400 to-rose-500'
+    ],
+    [
+        'name' => 'Mary Akello',
+        'service' => 'Nail Art Design',
+        'rating' => 5,
+        'review' => 'The ambiance is so relaxing and luxurious. Grace did an amazing job on my nail art - exactly what I envisioned! The attention to detail is unmatched. Highly recommend!',
+        'initial' => 'M',
+        'gradient' => 'from-purple-400 to-pink-500'
+    ],
+    [
+        'name' => 'Rebecca Namatovu',
+        'service' => 'Regular Pedicure',
+        'rating' => 5,
+        'review' => 'I\'ve been coming here for 6 months now and every visit exceeds my expectations. The hygiene standards are top-notch and Joy always gives the most relaxing pedicures!',
+        'initial' => 'R',
+        'gradient' => 'from-green-400 to-teal-500'
+    ],
+    [
+        'name' => 'Stella Namugga',
+        'service' => 'Lash Extensions',
+        'rating' => 5,
+        'review' => 'Diana is incredible with lash extensions! My lashes look so natural and full. The whole team is friendly and professional. Plus, the location at The Cube is so convenient!',
+        'initial' => 'S',
+        'gradient' => 'from-blue-400 to-indigo-500'
+    ]
+];
         @endphp
 
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -522,7 +389,7 @@
                 Ready to experience the luxury and excellence our clients rave about?
             </p>
             <a href="{{ route('contact') }}"
-                class="inline-flex items-center justify-center px-8 py-4 text-base font-medium text-white bg-rose-600 rounded-lg hover:bg-rose-700 transition-colors duration-200 shadow-lg">
+                class="inline-flex items-center justify-center px-8 py-4 text-base font-medium text-white bg-gray-900 dark:bg-white dark:text-gray-900 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors duration-200 shadow-lg">
                 Book Your Appointment
             </a>
         </div>

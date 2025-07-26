@@ -1,4 +1,3 @@
- 
 <x-app-layout>
     <x-slot name="title">Home</x-slot>
     <x-slot name="description">Experience luxury nail care at The Nail Bar UG. Professional manicures, pedicures,
@@ -57,26 +56,53 @@
                     </div>
                 </div>
 
-                <!-- Hero Image -->
-                <div class="relative">
+                <div class="relative max-w-2xl w-full">
                     <div class="relative z-10">
-                        <!-- Placeholder for hero image -->
-                        <div
-                            class="aspect-square bg-gradient-to-br from-pink-100 to-rose-200 dark:from-pink-900 dark:to-rose-800 rounded-3xl shadow-2xl overflow-hidden">
-                            <div class="w-full h-full flex items-center justify-center">
-                                <div class="text-center space-y-4 p-8">
-                                    <div
-                                        class="w-20 h-20 mx-auto bg-rose-500 rounded-full flex items-center justify-center">
-                                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a4 4 0 004-4V5z" />
-                                        </svg>
+                        <!-- Hero Image Container with Alpine Slideshow -->
+                        <div x-data="{
+                currentSlide: 0,
+                images: [
+                'images/1.jpg',
+                'images/2.jpg',
+                'images/3.jpg',
+                'images/4.jpg',
+                'images/5.jpg',
+                'images/6.jpg',
+                'images/7.jpg',
+                'images/8.jpg',
+                'images/9.jpg',
+                'images/10.jpg',
+                    
+                ],
+                
+                init() {
+                    // Start the infinite loop
+                    setInterval(() => {
+                        this.nextSlide();
+                    }, 5000); // Change image every 3 seconds
+                },
+                
+                nextSlide() {
+                    this.currentSlide = (this.currentSlide + 1) % this.images.length;
+                }
+            }" class="aspect-square bg-gradient-to-br from-pink-100 to-rose-200 dark:from-pink-900 dark:to-rose-800 rounded-3xl shadow-2xl overflow-hidden relative">
+
+                            <!-- Image slides -->
+                            <template x-for="(image, index) in images" :key="index">
+                                <div x-show="currentSlide === index"
+                                    x-transition:enter="transition-opacity ease-in-out duration-1000"
+                                    x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
+                                    x-transition:leave="transition-opacity ease-in-out duration-1000"
+                                    x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"
+                                    class="absolute inset-0 w-full h-full">
+                                    <div class="w-full h-full flex items-center justify-center"
+                                        :style="`background-image: url('${image}'); background-size: cover; background-position: center;`">
+                                        <div class="text-center space-y-4 p-8">
+                                            <!-- Your content can go here if needed -->
+                                        </div>
                                     </div>
-                                    <p class="text-gray-600 dark:text-gray-300 font-medium">Beautiful hands with
-                                        tropical flowers</p>
                                 </div>
-                            </div>
+                            </template>
                         </div>
                     </div>
 
@@ -85,10 +111,11 @@
                         class="absolute -top-4 -right-4 w-72 h-72 bg-gradient-to-br from-yellow-200 to-orange-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse">
                     </div>
                     <div class="absolute -bottom-8 -left-8 w-72 h-72 bg-gradient-to-br from-pink-200 to-rose-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"
-                        style="animation-delay: 2s;"></div>
+                        style="animation-delay: 2s;">
+                    </div>
+
                 </div>
             </div>
-        </div>
     </section>
 
     <!-- Services Preview Section -->
@@ -109,19 +136,22 @@
                             'title' => 'Beauty Bliss',
                             'subtitle' => 'Manicures',
                             'description' => 'Our luxe service includes nail & cuticle care, Epsom salt scrub exfoliation, can\'t-live-without massage, and your choice of polish.',
-                            'gradient' => 'from-pink-100 to-rose-200 dark:from-pink-900 dark:to-rose-800'
+                            'gradient' => 'from-pink-100 to-rose-200 dark:from-pink-900 dark:to-rose-800',
+                            'image' => 'images/2.jpg'
                         ],
                         [
                             'title' => 'Glamour Touch',
                             'subtitle' => 'Pedicures',
                             'description' => 'Includes a soak in essential oil, nail and cuticle care, callus reduction, Epsom salt scrub exfoliation, and massage.',
-                            'gradient' => 'from-purple-100 to-pink-200 dark:from-purple-900 dark:to-pink-800'
+                            'gradient' => 'from-purple-100 to-pink-200 dark:from-purple-900 dark:to-pink-800',
+                            'image' => 'images/3.jpg'
                         ],
                         [
                             'title' => 'Luxury Lacquers',
                             'subtitle' => 'Acrylic Nails',
                             'description' => 'Acrylic nails remain a firm favorite in nail grooming, being a lady of leisure is purely justified by your acrylic nails.',
-                            'gradient' => 'from-rose-100 to-pink-200 dark:from-rose-900 dark:to-pink-800'
+                            'gradient' => 'from-rose-100 to-pink-200 dark:from-rose-900 dark:to-pink-800',
+                            'image' => 'images/4.jpg'
                         ]
                     ];
                 @endphp
@@ -131,18 +161,10 @@
                         <div
                             class="relative overflow-hidden rounded-2xl shadow-lg group-hover:shadow-2xl transition-all duration-300 transform group-hover:-translate-y-2">
                             <!-- Service Image Placeholder -->
-                            <div
-                                class="aspect-[4/3] bg-gradient-to-br {{ $service['gradient'] }} p-8 flex items-center justify-center">
+                            <div class="aspect-[4/3] bg-gradient-to-br {{ $service['gradient'] }} p-8 flex items-center justify-center"
+                                style="background-image: url('{{ asset($service['image']) }}'); background-size: cover; background-position: center;">
                                 <div class="text-center">
-                                    <div
-                                        class="w-16 h-16 mx-auto bg-white/20 rounded-full flex items-center justify-center mb-4">
-                                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor"
-                                            viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a4 4 0 004-4V5z" />
-                                        </svg>
-                                    </div>
-                                    <p class="text-white font-medium">{{ $service['subtitle'] }}</p>
+
                                 </div>
                             </div>
 
@@ -164,7 +186,7 @@
 
             <div class="text-center mt-12">
                 <a href="{{ route('services') }}"
-                    class="inline-flex items-center justify-center px-8 py-4 text-base font-medium text-white bg-rose-600 rounded-lg hover:bg-rose-700 transition-colors duration-200 shadow-lg hover:shadow-xl">
+                    class="inline-flex items-center justify-center px-8 py-4 text-base font-medium text-white bg-gray-900 dark:bg-white dark:text-gray-900 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                     View All Services
                 </a>
             </div>
@@ -237,21 +259,10 @@
                 <div class="relative">
                     <div
                         class="aspect-square bg-gradient-to-br from-rose-200 to-pink-300 dark:from-rose-800 dark:to-pink-900 rounded-3xl shadow-2xl overflow-hidden">
-                        <div class="w-full h-full flex items-center justify-center p-8">
+                        <div class="w-full h-full flex items-center justify-center p-8"
+                            style="background-image: url('{{asset('images/7.jpg')}}')">
                             <div class="text-center space-y-6">
-                                <div
-                                    class="w-24 h-24 mx-auto bg-white/20 rounded-full flex items-center justify-center">
-                                    <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                                    </svg>
-                                </div>
-                                <div class="space-y-2">
-                                    <h4 class="text-white font-bold text-xl">Luxury, Creativity,</h4>
-                                    <h4 class="text-white font-bold text-xl">and Self-Care</h4>
-                                    <h4 class="text-white font-bold text-xl">Combined</h4>
-                                </div>
+
                             </div>
                         </div>
                     </div>

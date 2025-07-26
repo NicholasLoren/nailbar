@@ -27,72 +27,63 @@
             <div class="space-y-16 lg:space-y-24">
 
                 @php
-                    $services = [
-                        [
-                            'title' => 'Manicures',
-                            'subtitle' => 'Beauty Bliss',
-                            'description' => 'You\'d never go anywhere without your nails looking fresh to death. Our luxe service includes nail & cuticle care, Epsom salt scrub exfoliation, can\'t-live-without massage, and your choice of polish.',
-                            'features' => ['Nail & cuticle care', 'Epsom salt scrub exfoliation', 'Relaxing hand massage', 'Premium polish application', 'Nail art options'],
-                            'gradient' => 'from-pink-100 to-rose-200 dark:from-pink-900 dark:to-rose-800',
-                            'reverse' => false
-                        ],
-                        [
-                            'title' => 'Pedicures',
-                            'subtitle' => 'Glamour Touch',
-                            'description' => 'Our luxe service includes a soak in your choice of essential oil, nail and cuticle care, callus reduction, Epsom salt scrub exfoliation, can\'t-live-without massage, essential oil hot towel wrap, and your choice of polish.',
-                            'features' => ['Essential oil foot soak', 'Callus reduction', 'Epsom salt scrub', 'Relaxing foot massage', 'Hot towel treatment', 'Polish application'],
-                            'gradient' => 'from-purple-100 to-pink-200 dark:from-purple-900 dark:to-pink-800',
-                            'reverse' => true
-                        ],
-                        [
-                            'title' => 'Acrylic Nails',
-                            'subtitle' => 'Luxury Extensions',
-                            'description' => 'Acrylic nails remain a firm favorite in nail grooming, being a lady of leisure is purely justified by your acrylic nails. Perfect for adding length and strength to your natural nails.',
-                            'features' => ['Custom length & shape', 'Durable acrylic application', 'French tips available', 'Nail art designs', 'Long-lasting results'],
-                            'gradient' => 'from-rose-100 to-pink-200 dark:from-rose-900 dark:to-pink-800',
-                            'reverse' => false
-                        ],
-                        [
-                            'title' => 'Artificial Nails',
-                            'subtitle' => 'Enhanced Beauty',
-                            'description' => 'Artificial nails are a good way to add strength and length to your natural nails. Great for anyone with nails lacking in natural wow factor.',
-                            'features' => ['Strength enhancement', 'Length customization', 'Natural-looking finish', 'Damage protection', 'Professional application'],
-                            'gradient' => 'from-indigo-100 to-purple-200 dark:from-indigo-900 dark:to-purple-800',
-                            'reverse' => true
-                        ],
-                        [
-                            'title' => 'Gel Builder Nails',
-                            'subtitle' => 'Long-Lasting Shine',
-                            'description' => 'No-chip, long-lasting gel color offering incredible shine that lasts up to two weeks, following our quickie mani. Perfect for busy schedules, extended vacations or any occasion because… life.',
-                            'features' => ['2-week lasting power', 'No-chip formula', 'Incredible shine', 'Quick application', 'Perfect for busy lifestyles'],
-                            'gradient' => 'from-teal-100 to-cyan-200 dark:from-teal-900 dark:to-cyan-800',
-                            'reverse' => false
-                        ],
-                        [
-                            'title' => 'Ombre Nails',
-                            'subtitle' => 'Gradient Perfection',
-                            'description' => 'When you think of ombre nails, your mind might jump to the basic nude and white ombre nails that are always popular. But, if you have already tried that nail look and want something different, don\'t worry because there are a lot of different colors.',
-                            'features' => ['Custom color gradients', 'Nude & white classics', 'Colorful variations', 'Smooth transitions', 'Instagram-worthy results'],
-                            'gradient' => 'from-orange-100 to-red-200 dark:from-orange-900 dark:to-red-800',
-                            'reverse' => true
-                        ],
-                        [
-                            'title' => 'Eyelashes',
-                            'subtitle' => 'Flutter & Shine',
-                            'description' => 'Fake it til\' you make it. Find your false lash love, a lash for every look. From natural enhancement to dramatic volume, we\'ve got the perfect lashes for you.',
-                            'features' => ['Natural enhancement', 'Volume lashes', 'Length options', 'Custom styling', 'Professional application'],
-                            'gradient' => 'from-emerald-100 to-teal-200 dark:from-emerald-900 dark:to-teal-800',
-                            'reverse' => false
-                        ],
-                        [
-                            'title' => 'Eyebrow Shaping',
-                            'subtitle' => 'Perfect Frames',
-                            'description' => 'Properly groomed eyebrows can make a big difference in your overall appearance, helping to frame your face and balance your overall features. Most people aren\'t completely symmetrical, and that\'s where we come in.',
-                            'features' => ['Face framing design', 'Symmetry correction', 'Professional shaping', 'Tinting available', 'Maintenance advice'],
-                            'gradient' => 'from-amber-100 to-orange-200 dark:from-amber-900 dark:to-orange-800',
-                            'reverse' => true
-                        ]
-                    ];
+$services = [
+    [
+        'title' => 'Manicures',
+        'subtitle' => 'Beauty Bliss',
+        'description' => 'You\'d never go anywhere without your nails looking fresh to death. Our luxe service includes nail & cuticle care, Epsom salt scrub exfoliation, can\'t-live-without massage, and your choice of polish.',
+        'features' => ['Nail & cuticle care', 'Epsom salt scrub exfoliation', 'Relaxing hand massage', 'Premium polish application', 'Nail art options'],
+        'gradient' => 'from-pink-100 to-rose-200 dark:from-pink-900 dark:to-rose-800',
+        'reverse' => false,
+        'image' => asset('images/31.jpg')
+    ],
+    [
+        'title' => 'Pedicures',
+        'subtitle' => 'Glamour Touch',
+        'description' => 'Our luxe service includes a soak in your choice of essential oil, nail and cuticle care, callus reduction, Epsom salt scrub exfoliation, can\'t-live-without massage, essential oil hot towel wrap, and your choice of polish.',
+        'features' => ['Essential oil foot soak', 'Callus reduction', 'Epsom salt scrub', 'Relaxing foot massage', 'Hot towel treatment', 'Polish application'],
+        'gradient' => 'from-purple-100 to-pink-200 dark:from-purple-900 dark:to-pink-800',
+        'reverse' => true,
+        'image' => asset('images/42.jpg')
+    ],
+    [
+        'title' => 'Acrylic Nails',
+        'subtitle' => 'Luxury Extensions',
+        'description' => 'Acrylic nails remain a firm favorite in nail grooming, being a lady of leisure is purely justified by your acrylic nails. Perfect for adding length and strength to your natural nails.',
+        'features' => ['Custom length & shape', 'Durable acrylic application', 'French tips available', 'Nail art designs', 'Long-lasting results'],
+        'gradient' => 'from-rose-100 to-pink-200 dark:from-rose-900 dark:to-pink-800',
+        'reverse' => false,
+        'image' => asset('images/9.jpg')
+    ],
+    [
+        'title' => 'Artificial Nails',
+        'subtitle' => 'Enhanced Beauty',
+        'description' => 'Artificial nails are a good way to add strength and length to your natural nails. Great for anyone with nails lacking in natural wow factor.',
+        'features' => ['Strength enhancement', 'Length customization', 'Natural-looking finish', 'Damage protection', 'Professional application'],
+        'gradient' => 'from-indigo-100 to-purple-200 dark:from-indigo-900 dark:to-purple-800',
+        'reverse' => true,
+        'image' => asset('images/29.jpg')
+    ],
+    [
+        'title' => 'Gel Builder Nails',
+        'subtitle' => 'Long-Lasting Shine',
+        'description' => 'No-chip, long-lasting gel color offering incredible shine that lasts up to two weeks, following our quickie mani. Perfect for busy schedules, extended vacations or any occasion because… life.',
+        'features' => ['2-week lasting power', 'No-chip formula', 'Incredible shine', 'Quick application', 'Perfect for busy lifestyles'],
+        'gradient' => 'from-teal-100 to-cyan-200 dark:from-teal-900 dark:to-cyan-800',
+        'reverse' => false,
+        'image' => asset('images/28.jpg')
+    ],
+    [
+        'title' => 'Ombre Nails',
+        'subtitle' => 'Gradient Perfection',
+        'description' => 'When you think of ombre nails, your mind might jump to the basic nude and white ombre nails that are always popular. But, if you have already tried that nail look and want something different, don\'t worry because there are a lot of different colors.',
+        'features' => ['Custom color gradients', 'Nude & white classics', 'Colorful variations', 'Smooth transitions', 'Instagram-worthy results'],
+        'gradient' => 'from-orange-100 to-red-200 dark:from-orange-900 dark:to-red-800',
+        'reverse' => true,
+        'image' => asset('images/8.jpg')
+    ],
+
+];
                 @endphp
 
                 @foreach($services as $index => $service)
@@ -102,10 +93,10 @@
                         <div class="{{ $service['reverse'] ? 'lg:col-start-2' : '' }}">
                             <div class="relative">
                                 <div
-                                    class="aspect-[4/3] bg-gradient-to-br {{ $service['gradient'] }} rounded-2xl shadow-xl overflow-hidden">
+                                    class="aspect-[4/3] bg-gradient-to-br {{ $service['gradient'] }} rounded-2xl shadow-xl overflow-hidden" style="background-image: url('{{ $service['image'] }}'); background-size: cover; background-position: center;">
                                     <div class="w-full h-full flex items-center justify-center p-8">
                                         <div class="text-center space-y-4">
-                                            <div
+                                            {{-- <div
                                                 class="w-20 h-20 mx-auto bg-white/20 rounded-full flex items-center justify-center">
                                                 <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor"
                                                     viewBox="0 0 24 24">
@@ -113,7 +104,7 @@
                                                         d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a4 4 0 004-4V5z" />
                                                 </svg>
                                             </div>
-                                            <p class="text-white font-medium text-lg">{{ $service['subtitle'] }}</p>
+                                            <p class="text-white font-medium text-lg">{{ $service['subtitle'] }}</p> --}}
                                         </div>
                                     </div>
                                 </div>
@@ -162,7 +153,7 @@
                             </div>
 
                             <a href="{{ route('contact') }}"
-                                class="inline-flex items-center justify-center px-8 py-4 text-base font-medium text-white bg-rose-600 rounded-lg hover:bg-rose-700 transition-colors duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                                class="inline-flex items-center justify-center px-8 py-4 text-base font-medium text-white bg-gray-900 dark:bg-white dark:text-gray-900 rounded-lg hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
                                 Book This Service
                             </a>
                         </div>
