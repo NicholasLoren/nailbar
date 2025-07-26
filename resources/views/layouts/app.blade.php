@@ -9,6 +9,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    {{-- Logo --}}
+    <link rel="icon" href="{{ asset('images/logo.jpg') }}" type="image/jpeg">
+
+
+    {{-- SEO Meta Tags --}}
     
     <title>{{ isset($title) ? $title . ' - ' : '' }}The Nail Bar UG</title>
     <meta name="description" content="{{ $description ?? 'Professional nail care services in Kampala. Experience luxury manicures, pedicures, acrylic nails, and beauty treatments at The Nail Bar UG.' }}">
