@@ -55,6 +55,12 @@
 
     gtag('config', 'AW-11329538522');
     </script>
+
+    <!-- Event snippet for Page view conversion page -->
+    <script>
+    gtag('event', 'conversion', {'send_to': 'AW-11329538522/pD8OCOLPq_oYENqTrJoq'});
+    </script>
+
     
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
